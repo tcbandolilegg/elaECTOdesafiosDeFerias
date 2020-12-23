@@ -7,19 +7,17 @@ p {
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
-  margin-inline-end: 10px;
+  margin-inline-end: 5px;
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
   position: fixed;
   width: 100%;
   background-color: white;
   height: 60px;
   align-items: center;
-  /* border: 5px solid orangered; */
 }
 
 #logo {
@@ -31,11 +29,8 @@ nav {
 
 #menu {
   display: flex;
-  /* align-items: center;
-  justify-items: center; */
   justify-content: space-around;
   font-size: 10pt;
-  /* border: solid BLACK; */
   width: 100%;
 }
 
@@ -71,7 +66,7 @@ nav img {
 }
 
 #subtituloCapa {
-  font-size: 50px;
+  font-size: 30px;
   margin-left: 80px;
   font-weight: 500;
 }
@@ -79,34 +74,6 @@ nav img {
 button {
   border-radius: 50px;
   border: 0;
-}
-
-#buttonDestaqueDoMes {
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  border-color: white;
-  margin-top: 20px;
-  height: 40px;
-  width: 150px;
-  border: solid 2px;
-}
-
-#buttonCapa {
-  background-color: BLACK;
-  height: 100px;
-  width: 300px;
-  color: white;
-  font-size: 30px;
-  margin-left: 80px;
-}
-
-.destaqueBranco {
-  font-size: 30px;
-  color: yellow;
-
-  font-weight: bolder;
-  margin-right: 50px;
 }
 
 .pesquisa {
@@ -148,9 +115,9 @@ button {
 .galeria button {
   border: 0;
   border-radius: 50px;
-  height: 60px;
-  width: 200px;
-  font-size: 25px;
+  height: 40px;
+  width: 120px;
+  font-size: 15px;
   justify-content: center;
   background-color: BLACK;
   color: white;
@@ -177,39 +144,6 @@ button {
   padding-right: 5%;
   margin-bottom: 25px;
   max-width: 1600px;
-}
-
-.destaqueDoMes {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-}
-
-#nomeDestaque {
-  color: orangered;
-  font-weight: bolder;
-  font-size: 35px;
-}
-
-article {
-  color: white;
-  width: 250px;
-}
-
-.destaqueDoMes img {
-  border-radius: 50%;
-  height: 300px;
-}
-
-.fraseDeEfeito {
-  display: flex;
-  justify-content: left;
-}
-
-.fraseDeEfeito article {
-  font-size: 60px;
-  background-color: black;
-  font-weight: bolder;
 }
 
 footer {
