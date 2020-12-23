@@ -1,0 +1,225 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  height: 60px;
+  align-items: center;
+  /* border: 5px solid orangered; */
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+  height: 100%;
+}
+
+#menu {
+  display: flex;
+  /* align-items: center;
+  justify-items: center; */
+  justify-content: space-around;
+  font-size: 10pt;
+  /* border: solid BLACK; */
+  width: 100%;
+}
+
+#menu a {
+  text-decoration: none;
+  color: black;
+  justify-content: space-between;
+}
+
+#menu a:hover {
+  color: blue;
+}
+
+nav img {
+  height: 80%;
+  /* width: 50px; */
+}
+
+.capa {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  background-size: cover;
+  background-image: url(../images/capa_javascript.png);
+  justify-content: flex-end;
+  color: BLACK;
+}
+
+#tituloCapa {
+  font-size: 80px;
+  font-weight: bolder;
+  margin-left: 80px;
+}
+
+#subtituloCapa {
+  font-size: 50px;
+  margin-left: 80px;
+  font-weight: 500;
+}
+
+button {
+  border-radius: 50px;
+  border: 0;
+}
+
+#buttonDestaqueDoMes {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-color: white;
+  margin-top: 20px;
+  height: 40px;
+  width: 150px;
+  border: solid 2px;
+}
+
+#buttonCapa {
+  background-color: BLACK;
+  height: 100px;
+  width: 300px;
+  color: white;
+  font-size: 30px;
+  margin-left: 80px;
+}
+
+.destaqueBranco {
+  font-size: 30px;
+  color: yellow;
+
+  font-weight: bolder;
+  margin-right: 50px;
+}
+
+.pesquisa {
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.pesquisa input {
+  width: 50%;
+  border-radius: 100px;
+  border: solid black 2px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.pesquisa button {
+  border-radius: 100px;
+  border: solid white 2px;
+  font-size: 30px;
+  background-color: black;
+  height: 50px;
+  width: 200px;
+  color: white;
+}
+.galeria {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.galeria button {
+  border: 0;
+  border-radius: 50px;
+  height: 60px;
+  width: 200px;
+  font-size: 25px;
+  justify-content: center;
+  background-color: BLACK;
+  color: white;
+}
+
+.galeria button:hover {
+  background-color: lightgray;
+  color: BLACK;
+}
+
+.galeria img {
+  height: 200px;
+  width: 200px;
+}
+
+.desafios {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 25px;
+  max-width: 1600px;
+}
+
+.destaqueDoMes {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#nomeDestaque {
+  color: orangered;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+article {
+  color: white;
+  width: 250px;
+}
+
+.destaqueDoMes img {
+  border-radius: 50%;
+  height: 300px;
+}
+
+.fraseDeEfeito {
+  display: flex;
+  justify-content: left;
+}
+
+.fraseDeEfeito article {
+  font-size: 60px;
+  background-color: black;
+  font-weight: bolder;
+}
+
+footer {
+  display: flex;
+  background-color: orangered;
+  color: white;
+  height: 200px;
+}
+
+footer img {
+  height: 50px;
+  width: 50px;
+}
