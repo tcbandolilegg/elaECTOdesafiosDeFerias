@@ -69,6 +69,7 @@ nav img {
   font-size: 30px;
   margin-left: 80px;
   font-weight: 500;
+  margin-bottom: 50px;
 }
 
 button {
@@ -110,6 +111,8 @@ button {
   display: flex;
   align-content: center;
   justify-content: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .galeria button {
@@ -121,6 +124,7 @@ button {
   justify-content: center;
   background-color: BLACK;
   color: white;
+  margin-bottom: 20px;
 }
 
 .galeria button:hover {
@@ -144,6 +148,12 @@ button {
   padding-right: 5%;
   margin-bottom: 25px;
   max-width: 1600px;
+}
+
+.desafioSequencial {
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 240px;
 }
 
 footer {
