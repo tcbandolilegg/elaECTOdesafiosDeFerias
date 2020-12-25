@@ -65,6 +65,13 @@ nav img {
   margin-left: 80px;
 }
 
+.pagina {
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 #subtituloCapa {
   font-size: 30px;
   margin-left: 80px;
