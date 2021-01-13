@@ -9,13 +9,11 @@ O valor do empréstimo deverá ser até cinco vezes o salário. */
 
 alert("SOLUÇÃO EMPRESTIMO")
 
-idade = parseFloat(prompt("Digite a idade"))
-
-
 idadeMinima = 18
 idadeMaxima = 65
 salarioMinimo = 1500
 
+idade = parseFloat(prompt("Digite a idade"))
 
 if (idade < idadeMinima || idade > idadeMaxima) {
   alert("Infelizmente não só fazemos emprestimo para idades de 18 a 65")

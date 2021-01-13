@@ -7,8 +7,8 @@ O programa deve retornar se os dados estão ou não corretos.
 */
 
 alert("SOLUÇÃO VALIDA E-MAIL E SENHA")
-let email = "tcbandolilegg@gmail.com"
-let senha = "0TCBlegg*"
+const email = "tcbandolilegg@gmail.com"
+const senha = "0TCBlegg*"
 
 emailDigitado = prompt("Digite o e-mail")
 senhaDigitada = prompt("Digite a senha")

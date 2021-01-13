@@ -7,10 +7,19 @@ Calcule o preço da passagem, cobrando 0,50 por Km para viagens de até 200Km e 
 
 alert("SOLUÇÃO DO PREÇO DA PASSAGEM")
 quilometrosViagem = parseFloat(prompt("Digite a quantidade de quilometros a serem pergcoridos"))
-custoAcimaDe200Km = .45
-custoAte200Km = .50
-if (quilometrosViagem > 200) {
-  alert("Valor da pasagem é " + (quilometrosViagem * custoAcimaDe200Km) + " reais")
+
+const limite = 200
+const custoKmAcimaDe200Km = .45
+const custoKmAte200Km = .50
+
+if (quilometrosViagem > limite) {
+
+  quilometrosAcimaDelimite = quilometrosViagem - limite
+  custoQuilometrosAtelimite = limite * custoKmAte200Km
+  custoQuilometrosAcimaDelimite = quilometrosAcimaDelimite * custoKmAcimaDe200Km
+  valorPassagem = custoQuilometrosAcimaDelimite + custoQuilometrosAtelimite
+
 } else {
-  alert("Valor da pasagem é " + (quilometrosViagem * custoAte200Km) + " reais")
+  valorPassagem = quilometrosViagem * custoKmAte200Km
 }
+alert("Valor da pasagem é " + valorPassagem + " reais")
