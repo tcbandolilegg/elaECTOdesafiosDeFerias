@@ -18,6 +18,7 @@ nav {
   background-color: white;
   height: 60px;
   align-items: center;
+  color: a;
 }
 
 #logo {
@@ -30,7 +31,7 @@ nav {
 #menu {
   display: flex;
   justify-content: space-around;
-  font-size: 10pt;
+  font-size: 10px;
   width: 100%;
 }
 
@@ -84,6 +85,15 @@ button {
   border: 0;
 }
 
+.buttonAdvance {
+  background-color: lime;
+  width: 600px;
+}
+
+.buttonBack {
+  background-color: magenta;
+}
+
 .pesquisa {
   align-content: center;
   align-items: center;
@@ -114,12 +124,13 @@ button {
   width: 200px;
   color: white;
 }
+
 .galeria {
   display: flex;
   align-content: center;
   justify-content: center;
   margin-bottom: 25px;
-  margin-top: 25px;
+  margin-top: 80px;
 }
 
 .galeria button {
