@@ -2,7 +2,7 @@
 //   1- Crie um site que exiba um carrossel de imagens baseado em um vetor com a URL das mesmas.
 //   O carrossel deve mudar automaticamente a cada 2 segundos.
 
-const { cursorTo } = require("readline")
+
 
 //   2- Adicione dois botões para controle manual do carrossel: avançar e retroceder
 
@@ -33,12 +33,26 @@ const randomSelectColor = (min, max) => {
 selectColor = randomSelectColor(min, max)
 console.log(selectColor)
 
-movButton = ""
+
+const backGroundTextColor = (min, max) => {
+  console.log("no novo back", min, max)
+  newBackGroundText = randomSelectColor(min, max)
+  console.log(newBackGroundText)
+}
+
+backGroundTextColor(min, max)
+
+
+
 // selectColor = color[//randomico do color.length].hexaColor
 
 const createContainner = (containner) => {
   console.log("Criando o containner")
   const sectionColor = document.querySelector("section")
+  sectionColor.style.display = "flex"
+  sectionColor.style.alignItems = "center"
+  sectionColor.style.alignContent = "center"
+  sectionColor.style.justifyContent = "center"
 
   const divContainer = document.createElement('div');
   divContainer.classList.add('objectColor');
@@ -46,21 +60,36 @@ const createContainner = (containner) => {
   divContainer.style.height = "600px"
   divContainer.style.whidth = "600px"
 
+
+
   const divColor = document.createElement('div');
-  divColor.style.marginLeft = "200px"
+
   console.log("na div color", selectColor)
   divColor.style.backgroundColor = `${colors[selectColor].nameColor}`;
   divColor.classList.add('color-frame')
   divColor.style.height = "400px"
   divColor.style.width = "400px"
-  divColor.style.display = "flex"
   divColor.style.border = "solid 5px black"
-  divColor.style.align = "center"
+  divColor.style.textAlign = "center"
+  divContainer.style.alignItems = "center"
+  divContainer.style.justifyContent = "center"
+
 
   const colorName = document.createElement(`h1`)
   colorName.classList.add("textColorName")
   colorName.innerHTML = `${colors[selectColor].nameColor}`
   colorName.style.fontSize = "25px"
+  colorName.style.background = "antiquewhite"
+  // backGroundTextColor(min, max)
+
+  // colorName.style.background = `${colors[newBackGroundText].hexaColor}`
+
+  const colorHexa = document.createElement(`h1`)
+  colorHexa.classList.add("hexaColorName")
+  colorHexa.innerHTML = `${colors[selectColor].hexaColor}`
+  colorHexa.style.fontSize = "20px"
+  // colorHexa.style.background = `${colors[newBackGroundText].hexaColor}`
+  colorHexa.style.background = "antiquewhite"
 
   const divButtons = document.createElement("div")
   divButtons.classList.add('divButtons');
@@ -101,6 +130,8 @@ const createContainner = (containner) => {
 
 
   divColor.appendChild(colorName)
+  divColor.appendChild(colorHexa)
+
   divButtons.appendChild(advanceButton)
   divButtons.appendChild(backButton)
 
@@ -122,8 +153,9 @@ for (i = 0; i < buttons.length; i++) {
 
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('mouseover', (event) => {
-    buttonClass = event.target.classList;
-    cursor.pointer
+    buttonClass2 = event.target.classList;
+    // COMO MUDAR O PONTEIRO DO MOUE?
+    // buttonClass2.style.cursor = "pointer"
   })
 }
 
@@ -131,6 +163,7 @@ for (i = 0; i < buttons.length; i++) {
 const changeColor = (buttonClass) => {
   const divChange = document.querySelector(".color-frame")
   const nameChange = document.querySelector(".textColorName")
+  const hexaChange = document.querySelector(".hexaColorName")
 
   if (buttonClass == "advanceButton") {
     if (selectColor < (totColors - 1)) {
@@ -141,6 +174,7 @@ const changeColor = (buttonClass) => {
 
     divChange.style.backgroundColor = `${colors[selectColor].hexaColor}`
     nameChange.innerHTML = `${colors[selectColor].nameColor}`
+    hexaChange.innerHTML = `${colors[selectColor].hexaColor}`
   } else {
     if (selectColor != 0) {
       selectColor--
@@ -149,5 +183,6 @@ const changeColor = (buttonClass) => {
     }
     divChange.style.backgroundColor = `${colors[selectColor].hexaColor}`
     nameChange.innerHTML = `${colors[selectColor].nameColor}`
+    hexaChange.innerHTML = `${colors[selectColor].hexaColor}`
   }
 }

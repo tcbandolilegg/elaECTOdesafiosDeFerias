@@ -84,15 +84,14 @@ button {
   border-radius: 50px;
   border: 0;
 }
-
+/* 
 .buttonAdvance {
-  background-color: lime;
-  width: 600px;
+  /* background-color: lime; */
 }
 
-.buttonBack {
-  background-color: magenta;
-}
+/* .buttonBack {
+  background-color: antiquewhite;
+} */ 
 
 .pesquisa {
   align-content: center;
