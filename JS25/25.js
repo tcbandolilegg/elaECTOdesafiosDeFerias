@@ -11,14 +11,3 @@
 
 alert("TROCANDO DE COR")
 // frase = "Ei você aí, me dá um dinheiro ai"
-frase = (prompt("Digite sua frase!"))
-totCaracteres = frase.length
-
-for (i = 0; i < totCaracteres; i++) {
-  console.log(frase[i])
-  espera = 0
-  for (j = 0; j < 60; j++) {
-    espera = espera++
-  }
-}
-

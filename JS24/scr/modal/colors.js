@@ -5,32 +5,32 @@ const colors = [
     "rgbColor": "(0,0,0)"
   },
   {
-    "nameColor": "grey11",
+    "nameColor": "Grey11",
     "hexaColor": "#1C1C1C",
     "rgbColor": "(28,28,28)"
   },
   {
-    "nameColor": "grey21",
+    "nameColor": "Grey21",
     "hexaColor": "#363636",
     "rgbColor": "(54,54,54)"
   },
   {
-    "nameColor": "grey31",
+    "nameColor": "Grey31",
     "hexaColor": "#4F4F4F",
     "rgbColor": "(79,79,79)"
   },
   {
-    "nameColor": "DimGray",
+    "nameColor": "DimGrey",
     "hexaColor": "#696969",
     "rgbColor": "(105,105,105)"
   },
   {
-    "nameColor": "Gray",
+    "nameColor": "Grey",
     "hexaColor": "#808080",
     "rgbColor": "(128,128,128)"
   },
   {
-    "nameColor": "DarkGray",
+    "nameColor": "DarkGrey",
     "hexaColor": "#A9A9A9",
     "rgbColor": "(169,169,169)"
   },
@@ -140,12 +140,12 @@ const colors = [
     "rgbColor": "(176,196,222)"
   },
   {
-    "nameColor": "SlateGray",
+    "nameColor": "SlateGrey",
     "hexaColor": "#708090",
     "rgbColor": "(112,128,144)"
   },
   {
-    "nameColor": "LightSlateGray",
+    "nameColor": "LightSlateGrey",
     "hexaColor": "#778899",
     "rgbColor": "(119,136,153)"
   },
@@ -200,7 +200,7 @@ const colors = [
     "rgbColor": "(95,158,160)"
   },
   {
-    "nameColor": "DarkSlateGray",
+    "nameColor": "DarkSlateGrey",
     "hexaColor": "#2F4F4F",
     "rgbColor": "(47,79,79)"
   },
