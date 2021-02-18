@@ -11,33 +11,32 @@
 // // 
 
 
-// alert("CARROCEL DE CORES")
-// frase = "Ei você aí, me dá um dinheiro ai"
+
 // const colors = require('./scr/modal/colors.json');
 // const fs = require('fs');
 
 
 totColors = colors.length
-console.log(totColors)
+
 min = 0
 max = totColors - 1
-console.log("1", min, " ", max)
+
 
 const randomSelectColor = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
-  console.log("2", min, " ", max)
+
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 selectColor = randomSelectColor(min, max)
-console.log(selectColor)
+
 
 
 const backGroundTextColor = (min, max) => {
-  console.log("no novo back", min, max)
+
   newBackGroundText = randomSelectColor(min, max)
-  console.log(newBackGroundText)
+
 }
 
 backGroundTextColor(min, max)
@@ -47,7 +46,7 @@ backGroundTextColor(min, max)
 // selectColor = color[//randomico do color.length].hexaColor
 
 const createContainner = (containner) => {
-  console.log("Criando o containner")
+
   const sectionColor = document.querySelector("section")
   sectionColor.style.display = "flex"
   sectionColor.style.alignItems = "center"
@@ -64,7 +63,7 @@ const createContainner = (containner) => {
 
   const divColor = document.createElement('div');
 
-  console.log("na div color", selectColor)
+
   divColor.style.backgroundColor = `${colors[selectColor].nameColor}`;
   divColor.classList.add('color-frame')
   divColor.style.height = "400px"
@@ -74,66 +73,53 @@ const createContainner = (containner) => {
   divContainer.style.alignItems = "center"
   divContainer.style.justifyContent = "center"
 
+  // backGroundTextColor(min, max)
 
   const colorName = document.createElement(`h1`)
   colorName.classList.add("textColorName")
   colorName.innerHTML = `${colors[selectColor].nameColor}`
   colorName.style.fontSize = "25px"
   colorName.style.background = "antiquewhite"
-  // backGroundTextColor(min, max)
-
   // colorName.style.background = `${colors[newBackGroundText].hexaColor}`
 
   const colorHexa = document.createElement(`h1`)
   colorHexa.classList.add("hexaColorName")
   colorHexa.innerHTML = `${colors[selectColor].hexaColor}`
   colorHexa.style.fontSize = "20px"
-  // colorHexa.style.background = `${colors[newBackGroundText].hexaColor}`
   colorHexa.style.background = "antiquewhite"
+  // colorHexa.style.background = `${colors[newBackGroundText].hexaColor}`
 
   const divButtons = document.createElement("div")
   divButtons.classList.add('divButtons');
-  divButtons.style.justifyContent = "center"
+  divButtons.style.justifyContent = "space-around"
   divButtons.style.display = "flex"
   divButtons.style.marginTop = "50px"
 
   const advanceButton = document.createElement("button")
   advanceButton.classList.add('advanceButton');
-  advanceButton.style.backgroundColor = "#000000"
-  advanceButton.style.Color = "white"
+  advanceButton.style.backgroundColor = "#ffffff"
+  advanceButton.style.color = "#000000"
   advanceButton.style.height = "50px"
   advanceButton.style.width = "150px"
-  advanceButton.style.marginRight = "50px"
+  advanceButton.style.fontSize = "20px"
+  advanceButton.style.border = "solid 5px black"
+  advanceButton.innerText = "Próxima Cor"
 
   const backButton = document.createElement("button")
   backButton.classList.add('backButton');
-  backButton.style.backgroundColor = "#000000"
-  backButton.style.Color = "red"
+  backButton.style.backgroundColor = "#ffffff"
+  advanceButton.style.color = "#000000"
   backButton.style.height = "50px"
   backButton.style.width = "150px"
+  backButton.style.fontSize = "20px"
+  backButton.style.border = "solid 5px black"
   backButton.innerHTML = "Cor anterior"
-
-  // const backButtonText = document.createElement("p")
-  // backButtonText.classList.add('backButtonText');
-  // backButtonText.innerHTML = "Cor Anterior"
-  // backButtonText.style.fontSize = "15px"
-  // backButtonText.style.color = "withe"
-
-  // const advanceButtonText = document.createElement("p")
-  // advanceButtonText.classList.add('advanceButtonText');
-  // advanceButtonText.innerHTML = "Próxima Cor"
-  // advanceButtonText.style.fontSize = "15px"
-  // advanceButtonText.style.color = "withe"
-
-  // advanceButton.appendChild(advanceButtonText)
-  // backButton.appendChild(backButtonText)
-
 
   divColor.appendChild(colorName)
   divColor.appendChild(colorHexa)
 
-  divButtons.appendChild(advanceButton)
   divButtons.appendChild(backButton)
+  divButtons.appendChild(advanceButton)
 
   divContainer.appendChild(divColor);
   divContainer.appendChild(divButtons);
@@ -153,12 +139,21 @@ for (i = 0; i < buttons.length; i++) {
 
 for (i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('mouseover', (event) => {
-    buttonClass2 = event.target.classList;
-    // COMO MUDAR O PONTEIRO DO MOUE?
-    // buttonClass2.style.cursor = "pointer"
+    cursorPointer = event.target.classList;
+    //COMO MUDAR O PONTEIRO DO MOUE?
+    changePointer(cursorPointer)
   })
 }
 
+const changePointer = (cursorPointer) => {
+  if (cursorPointer == "advanceButton") {
+    const mouseCursor = document.querySelector(".advanceButton")
+    mouseCursor.style.cursor = "pointer"
+  } else {
+    const mouseCursor = document.querySelector(".backButton")
+    mouseCursor.style.cursor = "pointer"
+  }
+}
 
 const changeColor = (buttonClass) => {
   const divChange = document.querySelector(".color-frame")
@@ -171,7 +166,6 @@ const changeColor = (buttonClass) => {
     } else {
       alert("Ultima cor")
     }
-
     divChange.style.backgroundColor = `${colors[selectColor].hexaColor}`
     nameChange.innerHTML = `${colors[selectColor].nameColor}`
     hexaChange.innerHTML = `${colors[selectColor].hexaColor}`
@@ -179,7 +173,7 @@ const changeColor = (buttonClass) => {
     if (selectColor != 0) {
       selectColor--
     } else {
-      alert("Ultima cor")
+      alert("Primeira cor")
     }
     divChange.style.backgroundColor = `${colors[selectColor].hexaColor}`
     nameChange.innerHTML = `${colors[selectColor].nameColor}`
