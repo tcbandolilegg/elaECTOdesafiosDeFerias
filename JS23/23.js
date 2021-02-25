@@ -8,6 +8,8 @@ alert("ANIMANDO A FRASE")
 frase = (prompt("Digite sua frase!"))
 totCaracteres = frase.length
 
+
+const divFrase = document.querySelector(".fraseAnimada")
 for (i = 0; i < totCaracteres; i++) {
   console.log(frase[i])
   espera = 0
